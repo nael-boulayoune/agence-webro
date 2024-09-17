@@ -1,0 +1,211 @@
+---
+import { Image } from "astro:assets";
+import logo from "@assets/logo.svg";
+import { Icon } from "astro-icon/components";
+import Nav from "./Nav.astro";
+
+const { isBlack } = Astro.props;
+---
+
+<header
+  class:list={{
+    container: true,
+    "bg-black": isBlack,
+    "bg-gray": !isBlack,
+  }}
+>
+  <div>
+    <a href="/">
+      <Image src={logo} alt="Logo" loading="eager" />
+    </a>
+    <button id="toggle" aria-label="Ouvrir le menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+    <Nav />
+  </div>
+</header>
+
+<div class="bg-white mobile-menu">
+  <div>
+    <Nav />
+    <div>
+      <p>Comment on peut vous aider ? Parlons-en !</p>
+      <a href="tel:0649886838">
+        <Icon name="phone" /> 06 49 88 68 38
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  header {
+    padding: 1.25rem 0;
+
+    &.bg-black #toggle div {
+      background-color: var(--white);
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > #toggle {
+        width: 48px;
+        height: 48px;
+        background-color: transparent;
+        position: relative;
+        border: none;
+        padding: 0;
+
+        @media (width > 64rem) {
+          display: none;
+        }
+
+        &.active div:nth-child(1) {
+          transform: rotate(45deg);
+        }
+
+        &.active div:nth-child(2) {
+          opacity: 0;
+        }
+
+        &.active div:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        > div {
+          position: absolute;
+          width: 48px;
+          height: 4px;
+          border-radius: 4px;
+          background-color: var(--black);
+          left: 0;
+          transition: all 0.3s;
+
+          &:nth-child(1) {
+            transform: translateY(-14px);
+          }
+
+          &:nth-child(3) {
+            transform: translateY(14px);
+          }
+        }
+      }
+
+      > nav {
+        display: none;
+
+        @media (width > 64rem) {
+          display: block;
+
+          ul {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s;
+
+    @media (width > 64rem) {
+      display: none;
+    }
+
+    &.active {
+      grid-template-rows: 1fr;
+      position: relative;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+
+      &::before {
+        content: "";
+        border-style: solid;
+        border-color: transparent transparent #fff;
+        border-width: 0 calc(20px / 2) 10px;
+        position: absolute;
+        top: -10px;
+        right: 34px;
+      }
+    }
+
+    > div {
+      overflow: hidden;
+
+      > nav {
+        padding: 0 1.25rem;
+
+        li {
+          padding: 1.25rem 0;
+          border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+
+          a {
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      > div {
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        padding: 1.25rem;
+
+        p {
+          font-size: 0.938rem;
+        }
+
+        a {
+          display: flex;
+          gap: 4px;
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--accent);
+          transition: color 0.3s;
+
+          &:hover {
+            color: var(--black);
+          }
+        }
+      }
+    }
+  }
+
+  @media (width > 48rem) {
+    .bg-black,
+    .bg-gray {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById("toggle");
+  const mobileNav = document.querySelector(".mobile-menu");
+
+  toggle?.addEventListener("click", function () {
+    toggle?.classList.toggle("active");
+    mobileNav?.classList.toggle("active");
+
+    if (toggle?.classList.contains("active")) {
+      toggle?.setAttribute("aria-expanded", "true");
+      toggle?.setAttribute("aria-label", "Fermer le menu");
+    } else {
+      toggle?.setAttribute("aria-expanded", "false");
+      toggle?.setAttribute("aria-label", "Ouvrir le menu");
+    }
+
+    if (mobileNav?.classList.contains("active")) {
+      mobileNav?.setAttribute("aria-hidden", "false");
+    } else {
+      mobileNav?.setAttribute("aria-hidden", "true");
+    }
+  });
+</script>

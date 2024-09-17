@@ -1,0 +1,102 @@
+---
+import CTA from "@components/CTA.astro";
+import Newsletter from "@components/Newsletter.astro";
+import PostCard from "@components/PostCard.astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout
+  title="Blog | Webro"
+  description="Obtenez des conseils pratiques sur l'IA, le SEO et la conception web. Recevez des astuces sur le marketing par email toutes les 2 semaines."
+>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <div>
+          <p class="description">Le blog de Webro</p>
+          <h1>
+            Obtenez des conseils pratiques sur l'IA, le SEO et la conception web
+          </h1>
+        </div>
+      </div>
+      <div class="newsletter bg-white">
+        <h2 class="h4">
+          Recevez des conseils sur le marketing par email toutes les 2 semaines
+        </h2>
+        <Newsletter />
+      </div>
+    </div>
+  </section>
+  <section class="container bg-black">
+    <div class="blog">
+      <h2>Tous nos articles</h2>
+      <ul role="list" class="blog__posts">
+        {posts.map((post) => <PostCard post={post} />)}
+      </ul>
+    </div>
+  </section>
+  <section class="container bg-accent">
+    <div class="fullwidth">
+      <h2>Il y a encore plus d'infos là-bas...</h2>
+      <p class="intro">
+        Les meilleurs conseils sont disponibles en un seul et même endroit :
+        notre agence Webro.
+      </p>
+      <CTA title="Recevoir des conseils par Yanis" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .newsletter {
+    display: grid;
+    gap: 1.25rem;
+    padding: 2.5rem;
+    border-radius: 4px;
+
+    input,
+    textarea {
+      background-color: var(--gray);
+    }
+  }
+
+  .blog {
+    display: grid;
+    gap: 1.25rem;
+    padding: clamp(2.5rem, 1.6667rem + 4.1667vw, 5rem) 0;
+
+    h2 {
+      text-align: center;
+    }
+
+    .blog__posts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      max-width: 400px;
+
+      @media (width > 48rem) {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      }
+    }
+  }
+
+  @media (width > 64rem) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+
+      > div:first-child {
+        grid-column: 1/4;
+      }
+    }
+
+    .newsletter {
+      grid-column: 4/6;
+    }
+  }
+</style>

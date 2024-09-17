@@ -1,0 +1,26 @@
+---
+import NavLink from "./NavLink.astro";
+
+const LINKS = [
+  { title: "Accueil", href: "/" },
+  {
+    title: "Conception & développement web",
+    href: "/conception-web",
+  },
+  { title: "Optimisation de sites web", href: "/optimisation-de-sites-web" },
+  { title: "Blog", href: "/blog" },
+  { title: "Contact", href: "/contact" },
+];
+---
+
+<nav>
+  <ul role="list">
+    {
+      LINKS.map((link) => (
+        <li>
+          <NavLink href={link.href}>{link.title}</NavLink>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

@@ -1,0 +1,82 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<form id="form">
+  <div class="floating-label">
+    <label for="newsletter">Adresse email <span>(Obligatoire)</span></label>
+    <input
+      type="email"
+      name="newsletter"
+      id="newsletter"
+      autocomplete="email"
+      inputmode="email"
+      required
+    />
+  </div>
+  <button type="submit" id="button" class="btn btn--accent btn--icon">
+    M'inscrire <Icon name="arrow-right" />
+  </button>
+</form>
+<p>
+  <small
+    >En vous inscrivant, vous acceptez notre{" "}<a
+      href="/politique-de-confidentialite">politique de confidentialité</a
+    >.</small
+  >
+</p>
+
+<style>
+  form {
+    max-width: 30rem;
+    width: 100%;
+    position: relative;
+
+    button {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 4px;
+    }
+  }
+
+  a {
+    color: var(--accent);
+    transition: color 0.3s;
+    font-weight: 700;
+
+    &:hover {
+      color: currentColor;
+    }
+  }
+</style>
+
+<script>
+  import emailjs from "@emailjs/browser";
+
+  const btn = document.getElementById("button") as HTMLButtonElement;
+  const form = document.getElementById("form") as HTMLFormElement;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    btn.textContent = "Inscription...";
+    btn.disabled = true;
+
+    const serviceID = "contact_service";
+    const templateID = "newsletter_form";
+
+    emailjs
+      .sendForm(serviceID, templateID, form, {
+        publicKey: "JxDPwHhyl83Ut6n-g",
+      })
+      .then(
+        () => {
+          window.location.assign("/merci-newsletter");
+        },
+        (err) => {
+          alert(JSON.stringify(err));
+        }
+      );
+  });
+</script>

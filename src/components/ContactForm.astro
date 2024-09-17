@@ -1,0 +1,150 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<form id="form" class="bg-white">
+  <p>
+    <small>
+      <span>*</span> indique les champs obligatoires
+    </small>
+  </p>
+  <div class="inputs">
+    <div class="floating-label">
+      <label for="family-name">
+        Nom <span>*</span>
+      </label>
+      <input
+        type="text"
+        name="family-name"
+        id="family-name"
+        autocomplete="family-name"
+        required
+      />
+    </div>
+    <div class="floating-label">
+      <label for="name">
+        Prénom <span>*</span>
+      </label>
+      <input type="text" name="name" id="name" autocomplete="name" required />
+    </div>
+  </div>
+  <div class="inputs">
+    <div class="floating-label">
+      <label for="email">
+        Adresse email{" "}
+        <span>*</span>
+      </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        autocomplete="email"
+        inputmode="email"
+        required
+      />
+    </div>
+    <div class="floating-label">
+      <label for="phone">Téléphone</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        autocomplete="tel"
+        inputmode="tel"
+      />
+    </div>
+  </div>
+  <div class="inputs">
+    <div class="floating-label">
+      <label for="company-name">Nom de l'entreprise</label>
+      <input type="text" name="company-name" id="company-name" />
+    </div>
+    <div class="floating-label">
+      <label for="company-website">Site web de l'entreprise</label>
+      <input
+        type="url"
+        name="company-website"
+        id="company-website"
+        inputmode="url"
+      />
+    </div>
+  </div>
+  <div class="floating-label">
+    <label for="message">
+      Parlez-nous de vos besoins{" "}
+      <span>*</span>
+    </label>
+    <textarea name="message" id="message" rows={5} minlength={10} required
+    ></textarea>
+  </div>
+  <div class="floating-label">
+    <label for="about-us">Comment vous avez entendu parler de nous ?</label>
+    <input type="text" name="about-us" id="about-us" />
+  </div>
+  <button type="submit" id="button" class="btn btn--accent btn--icon">
+    Envoyez mon message
+    <Icon name="arrow-right" />
+  </button>
+</form>
+
+<style>
+  form {
+    display: grid;
+    justify-items: start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+
+    @media (width > 64rem) {
+      padding: 2.5rem;
+    }
+
+    input,
+    textarea {
+      background-color: var(--gray);
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+
+      @media (width > 555px) {
+        flex-direction: row;
+      }
+    }
+  }
+</style>
+
+<script>
+  import emailjs from "@emailjs/browser";
+
+  const btn = document.getElementById("button") as HTMLButtonElement;
+  const form = document.getElementById("form") as HTMLFormElement;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    btn.textContent = "Envoi...";
+    btn.disabled = true;
+
+    const serviceID = "contact_service";
+    const templateID = "contact_form";
+
+    emailjs
+      .sendForm(serviceID, templateID, form, {
+        publicKey: "JxDPwHhyl83Ut6n-g",
+      })
+      .then(
+        () => {
+          window.location.assign("/merci-contact");
+        },
+        (err) => {
+          alert(JSON.stringify(err));
+        }
+      );
+  });
+</script>

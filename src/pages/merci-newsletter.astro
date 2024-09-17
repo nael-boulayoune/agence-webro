@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Merci de vous être inscrit !">
+  <section class="container bg-gray">
+    <div class="fullwidth">
+      <h1>Vous êtes inscrit ! Vous allez recevoir de super trucs.</h1>
+      <p class="intro">
+        Vous recevrez un email de notre part toutes les deux semaines avec nos
+        meilleurs conseils.
+      </p>
+      <a href="/blog" class="btn btn--accent btn--icon"
+        >Recevoir des conseils via notre blog
+        <Icon name="arrow-right" />
+      </a>
+      <div>
+        <h2 class="h4">Suivez-nous !</h2>
+        <p>
+          Vous pouvez aussi rester en contact avec nous sur <a
+            href="https://www.facebook.com/AgenceWebro"
+            target="_blank"
+            rel="noopener noreferrer">Facebook</a
+          >,
+          <a
+            href="https://www.linkedin.com/company/agence-webro"
+            target="_blank"
+            rel="noopener noreferrer">LinkedIn</a
+          >{" "}ou{" "}
+          <a
+            href="https://x.com/agence_webro"
+            target="_blank"
+            rel="noopener noreferrer">X (autrefois Twitter)</a
+          >.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  a[target="_blank"] {
+    color: var(--accent);
+    font-weight: 700;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+
+  .h4 {
+    margin: 1rem 0 4px 0;
+  }
+</style>

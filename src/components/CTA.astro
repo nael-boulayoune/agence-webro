@@ -1,0 +1,44 @@
+---
+import yanis from "@assets/yanis-rounded.png";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<a href="/contact">
+  <Image src={yanis} alt="Yanis" />
+  <p class="btn btn--black">
+    {title}
+    <Icon name="arrow-right" />
+  </p>
+</a>
+
+<style>
+  a {
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: 50%;
+      margin-right: -1.25rem;
+      z-index: 1;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+
+      @media (width>48rem) {
+        padding: 0.625rem 1.25rem 0.625rem 2.5rem;
+        height: 70%;
+      }
+    }
+  }
+</style>

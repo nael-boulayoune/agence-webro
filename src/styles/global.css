@@ -1,0 +1,414 @@
+@font-face {
+  font-display: swap;
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-sans-3-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/source-sans-3-800.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/montserrat-900.woff2") format("woff2");
+}
+
+:root {
+  --accent: #c8543c;
+  --accent-dark: #ab3d26;
+  --black: #1a1a1a;
+  --black-dark: #0d0d0d;
+  --gray: #f2f2f2;
+  --gray-dark: #d8d8d8;
+  --white: #fff;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
+/* Reset CSS  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Source sans 3";
+  font-size: clamp(1.125rem, 1.0833rem + 0.2083vw, 1.25rem);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  @media (width > 48rem) {
+    margin: 0.625rem;
+  }
+
+  @media (width > 64rem) {
+    margin: 1.25rem;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  padding-inline-start: 0;
+
+  li:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+
+  li::marker {
+    color: var(--accent);
+  }
+
+  &[role="list"] {
+    list-style: none;
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  line-height: 1;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  text-wrap: pretty;
+  max-width: 60ch;
+}
+
+/* Typescale  */
+h1 {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: clamp(1.875rem, 1.3438rem + 2.6563vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 3.5rem);
+
+  &.underline::after {
+    content: "";
+    display: block;
+    width: 3.125rem;
+    height: 0.4375rem;
+    border-top: 0.125rem solid var(--accent);
+    border-bottom: 0.125rem solid var(--accent);
+    margin-top: 1.125rem;
+  }
+}
+
+h3 {
+  font-size: clamp(1.25rem, 0.9688rem + 1.4063vw, 2.375rem);
+}
+
+h4,
+.h4 {
+  font-size: clamp(1.125rem, 1rem + 0.625vw, 1.625rem);
+}
+
+.description {
+  font-size: clamp(0.875rem, 0.75rem + 0.625vw, 1.375rem);
+  font-weight: 700;
+}
+
+.intro {
+  font-size: clamp(1.25rem, 1.1719rem + 0.3906vw, 1.5625rem);
+}
+
+/* Class */
+.skip-link {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+
+  &:focus {
+    left: 1.25rem;
+    top: 1.25rem;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+    z-index: 999;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr min(100% - 2.5rem, 1600px) 1fr;
+
+  @media (width > 64rem) {
+    grid-template-columns: 1fr min(100% - 5rem, 1600px) 1fr;
+  }
+
+  >* {
+    grid-column: 2;
+  }
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  padding: clamp(2.5rem, 1.875rem + 3.125vw, 5rem) 0;
+  gap: clamp(2.5rem, 1.875rem + 3.125vw, 5rem);
+
+  @media (width > 64rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+    &.reverse>div:first-child {
+      order: 2;
+    }
+  }
+
+  >img {
+    width: 100%;
+  }
+
+  >div:first-child {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    gap: 1.25rem;
+  }
+}
+
+.fullwidth {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  padding: clamp(2.5rem, 1.875rem + 3.125vw, 5rem) 0;
+}
+
+.btn {
+  font-weight: 700;
+  color: var(--white);
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 14px 8px -10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.9;
+    cursor: not-allowed;
+  }
+}
+
+.btn--accent {
+  background-color: var(--accent);
+
+  [data-icon] {
+    color: var(--black);
+  }
+
+  &:hover {
+    background-color: var(--accent-dark);
+  }
+}
+
+.btn--black {
+  background-color: var(--black);
+
+  [data-icon] {
+    color: var(--accent);
+  }
+
+  &:hover {
+    background-color: var(--black-dark);
+  }
+}
+
+.btn--icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bg-black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.bg-black-dark {
+  background-color: var(--black-dark);
+  color: var(--white);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+  color: var(--black);
+}
+
+.bg-white {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+form {
+  span {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+}
+
+.floating-label {
+  position: relative;
+  width: 100%;
+
+  label {
+    position: absolute;
+    top: 0.325rem;
+    left: 1.25rem;
+    color: var(--black);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 1.25rem 1.25rem 0.625rem 1.25rem;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.1);
+
+    &:user-invalid {
+      border: 1px solid red;
+    }
+  }
+}
+
+@media (width > 48rem) {
+  main {
+    display: grid;
+    gap: 0.625rem;
+  }
+
+  section.bg-gray:not(:first-child),
+  section.bg-black:not(:first-child),
+  section.bg-accent {
+    border-radius: 4px;
+  }
+
+  section.bg-gray:first-child {
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+@media (width > 64rem) {
+  main {
+    display: grid;
+    gap: 1.25rem;
+  }
+}

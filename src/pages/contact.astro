@@ -1,0 +1,104 @@
+---
+import contact from "@assets/contact.png";
+import ContactForm from "@components/ContactForm.astro";
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout
+  title="Contactez l'agence Webro"
+  description="Informations de contact de l'agence Webro, basée dans les Vosges. Si vous n'êtes pas encore prêt à nous contacter, consultez notre FAQ pour voir si Webro est fait pour vous."
+>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <h1>Travaillez avec Webro</h1>
+        <p class="intro">
+          Prêt à démarrer un projet ? Remplissez le formulaire et Yanis vous
+          contactera rapidement. On a besoin d'en savoir plus.
+        </p>
+        <p>
+          Vous avez un projet mais vous n'êtes pas encore prêt à nous contacter
+          ?{" "}
+          <a href="/faq">Découvrez si Webro est fait pour vous.</a>
+        </p>
+        <ContactForm />
+      </div>
+      <div class="contact">
+        <Image
+          src={contact}
+          alt="L'équipe webro devant l'ordinateur."
+          loading="eager"
+        />
+        <div>
+          <h2 class="h4">Support Webro</h2>
+          <p>
+            Vous êtes un client actuel et vous avez des questions sur votre site
+            web ?{" "}
+            <a href="mailto:contact@webro.fr">Contactez nous</a>
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h2 class="h4">A propos</h2>
+          <address>
+            <a href="tel:0649886838">06 49 88 68 38</a>
+            <br />
+            <a href="mailto:contact@webro.fr">contact@webro.fr</a>
+            <br />
+            Ouvert du lundi au vendredi de 10h à 18h
+            <br />
+            Basé dans les Vosges, Grand Est
+          </address>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .grid {
+    align-items: start;
+
+    @media (width > 64rem) {
+      grid-template-columns: repeat(5, 1fr);
+
+      > div:first-child {
+        grid-column: 1/4;
+      }
+
+      > div:last-child {
+        grid-column: 4/6;
+      }
+    }
+
+    img {
+      box-shadow: 0 14px 8px -10px rgba(0, 0, 0, 0.15);
+    }
+
+    hr {
+      width: 100%;
+      border: 1px rgba(0, 0, 0, 0.1) solid;
+    }
+
+    .contact {
+      display: grid;
+      gap: 1.25rem;
+
+      div {
+        display: grid;
+        gap: 0.625rem;
+      }
+    }
+  }
+
+  a {
+    color: var(--accent);
+    transition: color 0.3s;
+    font-weight: 700;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
+</style>

@@ -1,0 +1,81 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+---
+
+<div class="social-share">
+  <p>Partagez :</p>
+  <ul role="list">
+    <li>
+      <a
+        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&t=${encodeURIComponent(title)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="facebook" title="Partager sur Facebook" />
+      </a>
+    </li>
+    <li>
+      <a
+        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="x" title="Partager sur X" />
+      </a>
+    </li>
+    <li>
+      <a
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="linkedIn" title="Partager sur LinkedIn" />
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .social-share {
+    position: sticky;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 1.25rem;
+
+    @media (width > 64rem) {
+      display: none;
+    }
+
+    p {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+
+      [data-icon] {
+        width: 2rem;
+        height: 2rem;
+        color: var(--accent);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+</style>

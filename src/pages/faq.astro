@@ -1,0 +1,174 @@
+---
+import CTA from "@components/CTA.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout
+  title="FAQ | Webro"
+  description="Regardez les questions les plus fréquemment posées pour savoir si Webro s'aligne à vos besoins et qu'on est le bon choix."
+>
+  <section class="container bg-gray">
+    <div class="faq">
+      <h1>Webro convient à votre projet ?</h1>
+      <p class="intro">
+        Webro se spécialise dans la création de sites web très performants, puis
+        dans l'optimisation et la refonte. On adapte notre approche à vos
+        objectifs et à votre marché.
+      </p>
+      <div>
+        <div>
+          <h2 class="h4">Quels sont vos tarifs en moyenne ?</h2>
+          <p>
+            Nos tarifs varient entre 2500€ et 15 000€ pour un site vitrine.
+            Contactez-nous pour <a href="/contact"
+              >recevoir plusieurs devis détaillés</a
+            >.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h2 class="h4">Quel est le délai pour créer mon site web ?</h2>
+          <p>
+            En moyenne, le délai pour créer votre site web est de 3 semaines. Il
+            peut durer plus longtemps en fonction du nombre de pages et de sa
+            complexité. Il est important d'être réactif dans nos échanges.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h2 class="h4">Quel est le planning pour la conception ?</h2>
+          <ol>
+            <li>
+              Complétez le cahier des charges et envoyez les annexes (images,
+              vidéos, logo...)
+            </li>
+            <li>
+              Rédigez votre contenu avec nos experts et vos experts en charge du
+              projet
+            </li>
+            <li>Modifiez et validez notre maquette</li>
+            <li>Développement sur-mesure de votre site web</li>
+            <li>Hébergement et mise en ligne</li>
+            <li>Contrat de maintenance et de mise à jour</li>
+          </ol>
+        </div>
+        <hr />
+        <div>
+          <h2 class="h4">Vous hébergez mon site web ?</h2>
+          <div>
+            <ul>
+              <li>
+                Création d'un site web : on vous demandera d'acheter votre
+                hébergement web et votre nom de domaine.
+              </li>
+              <li>
+                Optimisation et refonte d'un site web : on vous demandera de le
+                changer ou de le garder en fonction de votre budget et de vos
+                besoins.
+              </li>
+            </ul>
+            <p>
+              Dans tous les cas, vous êtes 100% prioritaire de votre hébergement
+              web, on aura accès à votre compte pour plusieurs raisons :
+            </p>
+            <ul>
+              <li>Acheter votre nom de domaine</li>
+              <li>Mettre en ligne votre site web</li>
+              <li>Mettre votre contenu à jour</li>
+              <li>Dépanner votre site web</li>
+              <li>Suivre les performances et les résultats</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div>
+          <h2 class="h4">Vous créez quel type de site web ?</h2>
+          <div>
+            <p>
+              Chaque client est unique, mais les sites web se rangent souvent en
+              3 catégories :
+            </p>
+            <ul>
+              <li>
+                Sites B2B ou B2C pour vendre un service en guidant les visiteurs
+                à travers l'entonnoir.
+              </li>
+              <li>
+                Site e-commerce pour vendre un produit et qui mesure ses
+                résultats en euros.
+              </li>
+              <li>
+                Site à but non lucratif pour servir la communauté et la mission
+                des associations professionnelles, charités et institutions. Ils
+                ont souvent besoin d'un grand site web avec beaucoup de pages.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div>
+          <h2 class="h4">Vous sous-traitez les sites web ?</h2>
+          <p>
+            Non, rien n'est sous-traité. On crée un seul site web à la fois.
+            Votre site web est le résultat d'un travail d'équipe entre vos
+            experts en charge du projet et nos experts.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h2 class="h4">CMS et outils maîtrisés ?</h2>
+          <div>
+            <p>
+              On développe de A à Z votre site web. Il faut savoir que les
+              outils qu'on utilise pour votre site web dépendront de sa taille
+              et de sa complexité.
+            </p>
+            <p>
+              Par exemple, un CMS populaire comme WordPress est approprié si
+              votre site web a besoin d'être mis à jour très souvent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container bg-accent">
+    <div class="fullwidth">
+      <h2>On a l'air de répondre à vos besoins ?</h2>
+      <p class="intro">
+        Pas sûr ? Intéressé ? Envoyez-nous un message et on continue la
+        conversation.
+      </p>
+      <CTA title="Planifiez un appel avec Yanis" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .faq {
+    display: grid;
+    gap: 1.25rem;
+    padding: clamp(2.5rem, 1.6667rem + 4.1667vw, 5rem) 0;
+    max-width: 65ch;
+    margin-inline: auto;
+
+    h1 {
+      text-align: center;
+    }
+
+    hr {
+      width: 100%;
+      border: 1px rgba(0, 0, 0, 0.1) solid;
+    }
+
+    > div {
+      display: grid;
+      gap: 1.25rem;
+
+      div {
+        display: grid;
+        gap: 0.625rem;
+      }
+    }
+  }
+</style>

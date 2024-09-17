@@ -1,0 +1,34 @@
+---
+import { YouTube } from "astro-embed";
+
+interface Props {
+  id: string;
+  title: string;
+}
+
+const { id, title } = Astro.props;
+---
+
+<YouTube id={id} title={title} playlabel="Regardez la vidéo" />
+
+<style>
+  lite-youtube {
+    aspect-ratio: 16/9;
+    border-radius: 4px;
+    box-shadow: 0 14px 8px -10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+
+    &::before {
+      font-family: "Source sans 3";
+      font-weight: bold;
+      color: var(--white);
+      font-size: clamp(0.625rem, 0.5417rem + 0.4167vw, 0.875rem);
+    }
+
+    > .lty-playbtn {
+      background: no-repeat center / 68px 68px;
+      background-image: url("../assets/playbtn.png");
+      filter: none;
+    }
+  }
+</style>

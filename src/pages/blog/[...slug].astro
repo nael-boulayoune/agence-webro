@@ -1,0 +1,235 @@
+---
+import ReadingProgress from "@components/ReadingProgress.astro";
+import SocialShare from "@components/SocialShare.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} | Webro`} image={post.data.image.og}>
+  <section class="container bg-gray">
+    <div class="fullwidth">
+      <h1>{post.data.title}</h1>
+      <!-- {
+        post.data.categories.length > 1 ? (
+          <ul role="list" class="categories intro">
+            {post.data.categories.map((categorie) => (
+              <li>
+                <a href={`/blog/categories/${categorie}`}>{categorie}</a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <a href={`/blog/categories/${post.data.categories}`} class="intro">
+            {post.data.categories}
+          </a>
+        )
+      } -->
+    </div>
+  </section>
+  <section class="container bg-white">
+    <div class="post">
+      <div class="post__author">
+        <Image src={post.data.author.image} alt={post.data.author.name} />
+        <address>Par {post.data.author.name}</address>
+      </div>
+      <div class="post__content">
+        <Content />
+        <div class="editor">
+          <Image src={post.data.author.image} alt={post.data.author.name} />
+          <div>
+            <h2>{post.data.author.name}</h2>
+            <p>
+              {post.data.author.description}
+              <a
+                href={post.data.author.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer">LinkedIn</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="post__social-share">
+        <p>Partagez</p>
+        <ul role="list">
+          <li>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url.href)}&t=${encodeURIComponent(post.data.title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="facebook" title="Partager sur Facebook" />
+            </a>
+          </li>
+          <li>
+            <a
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(Astro.url.href)}&text=${encodeURIComponent(post.data.title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="x" title="Partager sur X" />
+            </a>
+          </li>
+          <li>
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="linkedIn" title="Partager sur LinkedIn" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <SocialShare url={Astro.url.href} title={post.data.title} />
+  <ReadingProgress />
+</Layout>
+
+<style>
+  .categories {
+    display: flex;
+
+    li {
+      display: flex;
+
+      &:not(:last-child)::after {
+        content: ", ";
+        white-space: pre;
+      }
+    }
+  }
+
+  .post {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: clamp(2.5rem, 1.875rem + 3.125vw, 5rem) 0;
+    gap: clamp(2.5rem, 1.875rem + 3.125vw, 5rem);
+
+    @media (width > 48rem) {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.25rem;
+    }
+
+    .post__author {
+      display: none;
+
+      @media (width > 48rem) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        grid-column: 1/2;
+      }
+    }
+
+    .post__content {
+      display: grid;
+      gap: 1.25rem;
+
+      a {
+        color: var(--accent);
+        font-weight: 700;
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--black);
+        }
+      }
+
+      .editor {
+        padding: 1.25rem;
+        background-color: var(--gray);
+        border-radius: 4px;
+        margin-top: 5rem;
+        position: relative;
+        max-width: 60ch;
+        margin-inline: auto;
+
+        img {
+          width: auto;
+          position: absolute;
+          top: -40%;
+          left: 50%;
+          transform: translate(-50%, 40%);
+          border-radius: 50%;
+        }
+
+        div {
+          margin-top: 2.5rem;
+          display: grid;
+          gap: 0.625rem;
+        }
+      }
+
+      h2 {
+        font-size: clamp(1.25rem, 0.9688rem + 1.4063vw, 2.375rem);
+      }
+
+      h3 {
+        font-size: clamp(1.125rem, 1rem + 0.625vw, 1.625rem);
+      }
+
+      p {
+        max-width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      @media (width > 48rem) {
+        grid-column: 2/-1;
+      }
+
+      @media (width > 64rem) {
+        grid-column: 2/6;
+      }
+    }
+
+    .post__social-share {
+      display: none;
+
+      @media (width > 64rem) {
+        position: sticky;
+        top: 1.25rem;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 1.25rem;
+      }
+
+      ul {
+        display: grid;
+        gap: 1.25rem;
+
+        [data-icon] {
+          width: 2rem;
+          height: 2rem;
+          color: var(--accent);
+          transition: color 0.3s;
+
+          &:hover {
+            color: var(--black);
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,131 @@
+---
+import CTA from "@components/CTA.astro";
+import Lottie from "@components/Lottie.astro";
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import projets from "../assets/projets.svg";
+import YoutubeEmbed from "../components/YoutubeEmbed.astro";
+---
+
+<Layout
+  title="Service de conception et de développement web | Webro"
+  description="Webro fournit des services de conception et de développement web axés sur les résultats. Travaillez avec une équipe d'experts en développement web, design et SEO."
+>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <div>
+          <p class="description">CMS, design, SEO</p>
+          <h1>Service de conception et de développement web</h1>
+        </div>
+        <p class="intro">
+          Votre site web est l'atout le plus visible. Il génère le meilleur
+          retour sur investissement. On développe des sites web sur mesure et on
+          accepte tous les CMS, donc améliorons l'image de votre entreprise.
+        </p>
+      </div>
+      <YoutubeEmbed
+        id="GeebZz8xwcc"
+        title="Service de conception et de développement web"
+      />
+    </div>
+  </section>
+  <section class="container bg-white">
+    <div class="grid reverse">
+      <div>
+        <h2>Comment créer un bon site web ?</h2>
+        <p>
+          Sincèrement, il y a beaucoup de sites web mauvais parce qu'ils ne
+          suivent pas les bonnes pratiques de base.
+        </p>
+        <p>
+          La beauté et le design sont importants.{" "}
+          <strong>Mais un bon site web fait bien plus que ça.</strong>
+        </p>
+        <ul>
+          <li>Il est rapide, facile à mettre à jour et sécurisé</li>
+          <li>
+            Bon classement des moteurs de recherche pour augmenter le trafic
+          </li>
+          <li>Un design et des messages alignés avec l'entreprise</li>
+          <li>Facile à utiliser pour les visiteurs et les oblige à agir</li>
+          <li>
+            Accessible à tous les utilisateurs et fonctionne sur n'importe quel
+            appareil et taille d'écran
+          </li>
+          <li>Les résultats sont faciles à mesurer et améliorés</li>
+        </ul>
+      </div>
+      <Lottie src="/lottie/successfull-website.json" />
+    </div>
+  </section>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <h2>Construit pour qu'il réponde exactement à vos besoins</h2>
+        <p>
+          On développe des sites web sur mesure, du design jusqu'à la petite
+          ligne de code. Il peut aussi être créé en utilisant un CMS comme
+          WordPress.
+        </p>
+        <p>Le choix dépendra des besoins du projet et de sa complexité.</p>
+        <p>
+          Votre site web sur mesure est le fruit d'une collaboration entre nos
+          experts et vos experts. Ces sites sont construits par nous-mêmes.{" "}
+          <strong>Rien n'est sous-traité.</strong>
+        </p>
+        <p>
+          <strong>
+            Obtenez un site web unique qui ne ressemble pas à WordPress.
+          </strong>
+        </p>
+      </div>
+      <Lottie src="/lottie/conception.json" />
+    </div>
+  </section>
+  <section class="container bg-white">
+    <div class="grid reverse">
+      <div>
+        <h2>Agence Webro ou agence traditionnelle ?</h2>
+        <p>
+          Pourquoi on construit de meilleurs sites web ? On a une expertise dans
+          la création de sites web. Ce n'est pas le cas d'une agence
+          traditionnelle.
+        </p>
+        <ul>
+          <li>
+            <strong>
+              Les agences traditionnelles n'ont pas de priorité.{" "}
+            </strong>
+            Pour eux, les sites web sont un service secondaire.
+          </li>
+          <li>
+            <strong>
+              Nos services sont entièrement axés sur les sites web.{" "}
+            </strong>
+            On est expert dans la création et l'optimisation de sites web. On possède
+            10 fois plus d'expérience sur les sites web que l'employé d'une agence
+            à service complet.
+          </li>
+        </ul>
+        <p>
+          Les agences traditionnelles créent souvent des sites web qui ne
+          fonctionnent pas. Ce n'est pas surprenant. Les sites web sont
+          difficiles à faire correctement. Mais, Webro sait ce qu'il vous faut.
+        </p>
+      </div>
+      <Image src={projets} alt="Comparaison des projets de site web par an." />
+    </div>
+  </section>
+  <section class="container bg-accent">
+    <div class="fullwidth">
+      <h2>Prêt à parler de votre site web ?</h2>
+      <p class="intro">
+        Connaitre vos visiteurs. Savoir ce qui les pousse à l'action. Comprendre
+        comment résoudre vos problèmes. On créera un site web qui leur donnera
+        tout ce dont ils ont besoin.
+      </p>
+      <CTA title="Planifiez un appel avec Yanis" />
+    </div>
+  </section>
+</Layout>

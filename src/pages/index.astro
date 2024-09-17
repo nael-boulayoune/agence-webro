@@ -1,0 +1,193 @@
+---
+import CTA from "@components/CTA.astro";
+import Lottie from "@components/Lottie.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import devis from "../assets/devis.svg";
+import maquette from "../assets/maquette.png";
+import nael from "../assets/nael.png";
+import refonte from "../assets/refonte.svg";
+import yanis from "../assets/yanis.png";
+---
+
+<Layout
+  title="Agence de conception et de développement de sites web | Webro"
+  description="Basé dans les Vosges. On est là pour vous aider à faire grandir votre entreprise en créant un site web personnalisé."
+>
+  <section class="container bg-black">
+    <div class="grid">
+      <div>
+        <div>
+          <p class="description">Création, optimisation & référencement</p>
+          <h1>Agence de conception et de développement de sites web</h1>
+        </div>
+        <p class="intro">
+          Obtenez un site web qui marche vraiment pour vous. Notre agence
+          concevra un site web facile à mettre à jour, qui génère des
+          conversions et capture votre histoire unique.
+        </p>
+        <a href="/contact" class="btn btn--accent btn--icon">
+          Parlez-nous de votre site web <Icon name="arrow-right" />
+        </a>
+      </div>
+      <Lottie src="/lottie/hero-animation.json" />
+    </div>
+  </section>
+  <section class="container bg-white">
+    <div class="grid reverse">
+      <div>
+        <h2 class="underline">
+          Créez un site web, aimé par vous et vos clients
+        </h2>
+        <p>
+          Un site web renforce la crédibilité de votre entreprise et augmente
+          vos chances d'être trouvé par de nouveaux clients.
+        </p>
+        <p>
+          <strong>
+            On est là pour vous accompagner à chaque étape, en vous offrant des
+            conseils précieux.
+          </strong>
+        </p>
+        <p>
+          Faites-nous confiance pour créer un site web sur mesure qui répond à
+          vos besoins.
+        </p>
+      </div>
+      <Image src={maquette} alt="Maquette d'une page web" />
+    </div>
+  </section>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <h2 class="underline">
+          Votre site web est-il aussi efficace qu'il pourrait l'être ?
+        </h2>
+        <p>
+          <strong>Un meilleur site web commence par la recherche.</strong>
+        </p>
+        <p>
+          La curiosité est notre point de départ. On se lance ensuite dans une
+          stratégie approfondie. On vous interroge, vous, l'entreprise et vos
+          clients. On vous écoute et on se renseigne, en posant des questions
+          pour comprendre votre entreprise.
+        </p>
+        <p>
+          <strong>
+            Gardez votre site web à jour et compétitif. Une refonte positionne
+            votre entreprise pour l'avenir.
+          </strong>
+        </p>
+      </div>
+      <Image src={refonte} alt="Refonte d'une page web" />
+    </div>
+  </section>
+  <section class="container bg-white">
+    <div class="grid reverse">
+      <div>
+        <h2 class="underline">Rencontrez votre équipe d'experts Webro</h2>
+        <h3>
+          <q>Un seul site web à la fois</q>
+        </h3>
+        <p>
+          Notre objectif est de fournir des sites web de qualité qui dépassent
+          les attentes de nos clients, avec un travail d'équipe, une expertise
+          et une bonne attitude.
+        </p>
+        <p>
+          <strong>
+            On est deux frères qui aiment ce qu'on fait et les clients avec
+            lesquels on travaille. Rien n'est sous-traité.
+          </strong>
+        </p>
+      </div>
+      <div class="team">
+        <div>
+          <Image src={nael} alt="Nael" />
+          <div>
+            <h4>Fondateur</h4>
+            <p>
+              Développeur web et designer, Nael s'occupe de la partie technique
+              des sites web.
+            </p>
+          </div>
+        </div>
+        <div>
+          <Image src={yanis} alt="Yanis" />
+          <div>
+            <h4>Co-fondateur</h4>
+            <p>
+              Chef de projet et commercial, Yanis collabore avec les clients et
+              identifie les objectifs des sites web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <h2 class="underline">Combien coûtera (réellement) mon site web ?</h2>
+        <p>
+          Le prix d'un site web varie entre 0 et plus de 10 millions d'euros.
+          C'est fou mais vrai. Les sites web que vous visitez tous les jours
+          coûtent en moyenne 100 000 €, voire plus. La plupart des sites web
+          nécessitent des centaines d'heures de planification, de conception et
+          de développement.
+        </p>
+        <p>
+          <strong>
+            Chez Webro, chaque projet est unique. Par exemple, la création d'un
+            site vitrine peut varier entre 2 500 € et 15 000 €.
+          </strong>
+        </p>
+        <p>Contrôlez votre budget avec un partenaire transparent.</p>
+      </div>
+      <Image
+        src={devis}
+        alt="Exemples d'un devis pour la création d'un site vitrine."
+      />
+    </div>
+  </section>
+  <section class="container bg-accent">
+    <div class="fullwidth">
+      <h2>Quels services vous conviennent le mieux ?</h2>
+      <p class="intro">
+        La conception d'un site web est pleine de petites décisions.
+        Rassurez-vous, le résultat final est toujours un site web que vous aimez
+        et qui apporte des résultats.
+      </p>
+      <CTA title="Contactez Yanis" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .team {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    @media (width > 600px) {
+      flex-direction: row;
+    }
+
+    > div {
+      background-color: var(--gray);
+      border-radius: 4px;
+      max-width: 320px;
+
+      img {
+        border-radius: 4px 4px 0 0;
+      }
+
+      div {
+        display: grid;
+        gap: 0.625rem;
+        padding: 1.25rem;
+      }
+    }
+  }
+</style>

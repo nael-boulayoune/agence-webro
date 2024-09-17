@@ -1,0 +1,213 @@
+---
+import CTA from "@components/CTA.astro";
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+import conseils from "../assets/conseils.svg";
+import duree from "../assets/duree-de-vie.svg";
+import redesign from "../assets/redesign.svg";
+import seo from "../assets/seo.svg";
+import strategie from "../assets/strategie.svg";
+import YoutubeEmbed from "../components/YoutubeEmbed.astro";
+---
+
+<Layout
+  title="Service d'optimisation de sites web | Webro"
+  description="Tranformez votre site web en un outil d'affaire rentable et à forte conversion. Nos stratégie d'optimisation génèrent des résultats et produisent un impact qui dépasse vos attentes."
+>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <div>
+          <p class="description">Service d'optimisation de sites web</p>
+          <h1>Votre entreprise a besoin de refaire son site web ?</h1>
+        </div>
+        <p class="intro">
+          Vous avez investi du temps et de l'argent. Pourtant, votre site web ne
+          produit pas les résultats souhaités. Vous avez besoin d'une
+          amélioration pour suivre le rythme, mais aussi pour vous démarquer à
+          long terme.
+        </p>
+      </div>
+      <YoutubeEmbed
+        id="BCzUJ56Y4YU"
+        title="Service d'optimisation de sites web"
+      />
+    </div>
+  </section>
+  <section class="container bg-white">
+    <div class="grid reverse">
+      <div>
+        <h2>Soyez le premier dans votre secteur à refaire votre site web</h2>
+        <p>
+          Certaines entreprises tardent à agir et ça se voit.{" "}
+          <strong>
+            La durée de vie moyenne d'un site web est de 2 ans et 7 mois.
+          </strong>
+        </p>
+        <p>
+          Le design a un impact considérable sur l'impression que vos visiteurs
+          ont de votre entreprise. Il influence leur perception de la valeur (et
+          du prix) de vos services.
+        </p>
+        <p>
+          Regardez les sites web d'aujourd'hui et ceux de vos concurrents.
+          Maintenant, regardez le vôtre.
+        </p>
+        <p>
+          <strong> Ne remettez pas trop la refonte à plus tard. </strong>
+        </p>
+      </div>
+      <Image
+        src={duree}
+        alt="Graphique montrant la durée de vie moyenne d'un site web : 2 ans et 1 mois. Il compare les cycles de vie sans refonte (zone bleue) et avec refonte (zone jaune), sur une période allant de 1 à 5 ans."
+      />
+    </div>
+  </section>
+  <section class="container bg-gray">
+    <div class="grid">
+      <div>
+        <h2>À quoi s'attendre de mon nouveau site web ?</h2>
+        <p>
+          <strong>
+            La refonte d'un site web a un impact puissant qui dure des années.{
+              " "
+            }
+          </strong>
+          Voici ce à quoi vous pouvez vous attendre lorsqu'on refait votre site web
+          :
+        </p>
+        <ul>
+          <li>
+            Des classements de recherche plus élevés et des visiteurs plus
+            qualifiés grâce à l'amélioration du contenu et de la pertinence.
+          </li>
+          <li>
+            Des taux de clics plus élevés grâce à des appels à l'action plus
+            convaincants.
+          </li>
+          <li>
+            Des taux de conversion plus élevés grâce à un design moderne (qui
+            reflète enfin la qualité de vos services).
+          </li>
+          <li>
+            Une stratégie affinée avec un audit de votre site web existant, de
+            sorte qu'il réponde aux besoins des visiteurs
+          </li>
+          <li>
+            Une analyse, un support technique et une maintenance expliqués
+            simplement à vous.
+          </li>
+        </ul>
+      </div>
+      <div class="results">
+        <div>
+          <div>
+            <h3 class="h4">Meilleur référencement</h3>
+            <p>Classements de recherche plus élevés.</p>
+          </div>
+          <Image src={seo} alt="Classements de recherche plus élevés." />
+        </div>
+        <div>
+          <div>
+            <h3 class="h4">Design moderne</h3>
+            <p>Représentant la qualité de vos services.</p>
+          </div>
+          <Image
+            src={redesign}
+            alt="Design moderne qui reflète la qualité de vos services."
+          />
+        </div>
+        <div>
+          <div>
+            <h3 class="h4">Conseils & stratégie</h3>
+            <p>Audit de votre site web existant, cahier des charges.</p>
+          </div>
+          <Image src={conseils} alt="Conseils et stratégie." />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container bg-white">
+    <div class="grid reverse">
+      <div>
+        <h2>Notre stratégie pour améliorer votre site web</h2>
+        <p>
+          La conception web et le marketing digital sont deux choses meilleures
+          ensemble. Les questions qu'on vous pose dans l'audit et dans le cahier
+          des charges vous aident à comprendre votre public, vos objectifs de
+          conversion et votre entreprise.
+        </p>
+        <p>
+          On pense que réaliser un site web et faire du marketing en même temps
+          est logique.
+        </p>
+        <p>
+          Regardez votre entreprise. Réévaluez votre charte graphique et votre
+          message.{" "}
+          <strong>
+            Il est temps d'affiner votre entreprise et d'aligner le design sur
+            l'avenir, et non sur le passé.
+          </strong>
+        </p>
+      </div>
+      <Image src={strategie} alt="Stratégie pour améliorer votre site web." />
+    </div>
+  </section>
+  <section class="container bg-accent">
+    <div class="fullwidth">
+      <h2>Obtenez un site web conçu avec expertise et stratégie</h2>
+      <p class="intro">
+        On veut que vous aimiez à nouveau votre site web. Si vous n'en êtes pas
+        satisfait, parlons de ce qu'on peut faire pour raviver la flamme.
+      </p>
+      <p>
+        <strong>
+          Profitez-en pour prendre du recul et améliorer votre réputation.
+        </strong>
+      </p>
+      <CTA title="Commencez aujourd'hui en contactant Yanis" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .results {
+    display: grid;
+    gap: 1.25rem;
+
+    > div {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      background-color: var(--white);
+      padding: 2.5rem;
+      border-radius: 4px;
+      width: 100%;
+
+      @media (width > 48rem) {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+      }
+
+      > div {
+        display: grid;
+        gap: 0.625rem;
+        order: 2;
+
+        @media (width > 48rem) {
+          order: 1;
+        }
+      }
+
+      > img {
+        width: 400px;
+        order: 1;
+
+        @media (width > 48rem) {
+          order: 2;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<LottieAnimation
+  src={src}
+  player="full"
+  loop
+  autoplay="visible"
+  visibleThreshold={1}
+/>
