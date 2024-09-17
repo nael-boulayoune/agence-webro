@@ -50,7 +50,7 @@ Ce que l'on peut dire avec certitude, c'est que tous les sites web doivent être
 
 Il existe de nombreuses raisons pour lesquelles les sites web sont refaits :
 
-![Graphique à barres intitulé "Pourquoi les sites web sont refaits ?" Avec 9 raisons : design obsolète (22%), faible performance (13%), contenu obsolète (12%), difficulté pour les utilisateurs (12%), rebranding (11%), difficulté de mise à jour (11%), nouvelles fonctionnalités nécessaires (9%), changements dans l'entreprise (8%) et problèmes liés aux partenaires web (3%). Taille de l’échantillon : 120.](../../assets/blog/post-1/image-1.svg)
+![Graphique à barres intitulé "Pourquoi les sites web sont refaits ?" Avec 9 raisons : design obsolète (22%), faible performance (13%), contenu obsolète (12%), difficulté pour les utilisateurs (12%), rebranding (11%), difficulté de mise à jour (11%), nouvelles fonctionnalités nécessaires (9%), changements dans l'entreprise (8%) et problèmes liés aux partenaires web (3%). Taille de l’échantillon : 120.](../../assets/blog/post-1/image-3.svg)
 
 _Quand et pourquoi il faut refaire son site web ? Pour répondre à ces questions, posez-vous les questions suivantes :_
 
@@ -88,6 +88,8 @@ Les systèmes de gestion de contenu se sont améliorés. De nos jours, il devrai
 
 À moins que vous ne promouviez et n'optimisiez activement le contenu de votre site web, les classements ont tendance à baisser au fil du temps. Une refonte peut inverser la tendance à la baisse du trafic de recherche grâce à un nouveau plan de site axé sur les phrases clés, avec de nouvelles pages ciblant de nouvelles phrases.
 
+![Graphique montrant le trafic de recherche organique avant et après une refonte du site web. Les tendances du trafic augmentent considérablement après la refonte.](../../assets/blog/post-1/image-1.svg)
+
 ### 9. Mon taux de conversion est en baisse ?
 
 Les attentes des visiteurs ne cessent d'augmenter. Si votre site web ne s'améliore pas en permanence, les taux de conversion ont tendance à baisser. Une refonte peut inverser le processus de vieillissement grâce à une nouvelle conception optimisée pour la conversion, qui résonne mieux auprès de vos utilisateurs.
@@ -104,7 +106,7 @@ Si vous avez beaucoup répondu "oui", il est probable que votre site commence à
 
 Effectuer des mises à jour et des optimisations fréquentes sur votre site web est l'un des meilleurs moyens d'inverser ou de retarder le processus de vieillissement. Voici quelques méthodes pour actualiser votre site à l'aide de mises à jour de contenu, de mise en page et de conception :
 
-![Graphique montrant le trafic de recherche organique avant et après une refonte du site web. Les tendances du trafic augmentent considérablement après la refonte.](../../assets/blog/post-1/image-3.svg)
+![Un graphique montrant les résultats du site web au fil du temps avec deux phases : aucune amélioration (résultats en baisse) en jaune et optimisation continuelle en bleu sarcelle, illustrant une hausse après la relance d'un site web.](../../../public/og/post-1.svg)
 
 **Actualisez votre contenu :** créer et ajouter du nouveau contenu, comme des textes actualisés, des images, des vidéos et des articles de blog, peut faire une grande différence. Non seulement ces ressources peuvent être réutilisées pour une refonte ultérieure, mais elles peuvent également actualiser votre stratégie de référencement, améliorant potentiellement votre classement pour diverses expressions clés.
 
