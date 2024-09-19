@@ -11,7 +11,6 @@ author:
   image: "../../assets/yanis-rounded.png"
   description: "Co-fondateur dans l'agence Webro. Chef de projet et commercial, Yanis collabore avec les clients et identifie les objectifs des sites web. Vous pouvez le suivre sur"
   linkedIn: "https://www.linkedin.com/in/yanis-boulayoune-webro/"
-categories: ["conception-web"]
 ---
 
 Un jour, un client me demande : "Combien de fois on doit refaire notre site web ?"
@@ -35,7 +34,7 @@ Vous pensez probablement que 6 ans semblent être une longue période, et vous a
 La question est compliquée pour plusieurs raisons :
 
 - Le secteur dans lequel vous travaillez aura un impact énorme sur la longévité de votre site web. Les entreprises dans les domaines très concurrentiels sont plus susceptibles de refaire plus fréquemment.
-- D'autres facteurs comme les attentes des visiteurs, les modifications apportées au site web, les directives de marque, mises à jour... joueront tous un rôle dans la longévité de votre site web.
+- D'autres facteurs comme les [attentes des visiteurs](https://www.orbitmedia.com/blog/website-features-content/), les modifications apportées au site web, les directives de marque, mises à jour... joueront tous un rôle dans la longévité de votre site web.
 - Si elle est réalisée correctement, une refonte de haute qualité peut durer plus de 5 ans, contrairement à un travail de moindre qualité. C'est en partie la raison pour laquelle il est si important de trouver une entreprise spécialisée dans les sites web (conception, développement web et SEO).
 
 Si vous laissez un site web en ligne au-delà de sa date de "péremption", les résultats commenceront à décliner.
@@ -66,13 +65,15 @@ Vous publiez plus, organisez des événements ou modifiez votre façon de publie
 
 Votre entreprise et votre secteur d'activité peuvent être façonnés par de nombreux facteurs : nouvelles technologies, évolution des meilleures pratiques, événements actuels, tendances du marché, etc. Votre site peut être un fort reflet de votre position sur le marché.
 
+> Refaire les sites web, c’est comme discuter de politique sur les réseaux sociaux. Chaque crétin a une opinion et veut avoir le dernier mot. Je ne donne pas mon feu vert à un processus de refonte à moins qu’il n’y ait d’autres raisons, comme le lancement d’un nouveau produit, l’attaque d’un nouveau marché ou le changement du positionnement de l’entreprise. Ce n’est pas parce que les gens s’ennuient avec le design ou la copie qu’il y a une raison suffisante pour faire un remaniement. Les entreprises qui s’ennuient avec leurs messages devraient faire des tests A/B et laisser leur audience voter en cliquant sur leur message. Une performance médiocre n’est pas non plus un problème. La performance est généralement due au fait que les entreprises ne consacrent pas suffisamment de temps à apporter les changements nécessaires pour augmenter le trafic de recherche et améliorer les chemins de conversion. - Peter Caputa, Fondateur de [Databox](https://databox.com/)
+
 ### 4. Est-ce que je travaille dans un secteur lié au design ou à la technologie ?
 
 Le secteur dans lequel vous évoluez joue un rôle important dans la longévité d'un site web. Les temps changent plus vite pour les entreprises du marketing digitale, de la publicité, du design et des technologies, tout comme les sites web. Être le plus lent à refaire votre site web dans votre secteur vous met dans une position désavantageuse...
 
 ### 5. Mon site est en phase avec les tendances en matière de design ?
 
-Un site web qui n'est pas à jour avec les tendances et les meilleures pratiques actuelles en matière de conception web peut nuire à votre crédibilité et détourner les utilisateurs, par rapport à des sites plus modernes et mis à jour.
+Un site web qui n'est pas à jour avec [les tendances et les meilleures pratiques de conception web](conseils-de-conception-web) peut nuire à votre crédibilité et détourner les utilisateurs, par rapport à des sites plus modernes et mis à jour.
 
 ![Infographie intitulée "Les 10 normes de conception de sites web par rapport aux meilleures pratiques" présentant des statistiques et des recommandations pour les éléments de conception web courants, tels que le placement du logo, l'emplacement des icônes sociales et les barres de navigation.](../../assets/blog/post-1/image-2.svg)
 

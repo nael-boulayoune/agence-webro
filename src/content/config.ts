@@ -17,7 +17,6 @@ const blog = defineCollection({
         description: z.string(),
         linkedIn: z.string(),
       }),
-      categories: z.array(z.enum(["marketing", "seo", "ia", "conception-web"])),
     }),
 });
 

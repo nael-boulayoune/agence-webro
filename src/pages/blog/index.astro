@@ -59,9 +59,8 @@ const posts = (await getCollection("blog")).sort(
     padding: 2.5rem;
     border-radius: 4px;
 
-    input,
-    textarea {
-      background-color: var(--gray);
+    input {
+      background-color: #f9f9fa;
     }
   }
 
@@ -70,15 +69,10 @@ const posts = (await getCollection("blog")).sort(
     gap: 1.25rem;
     padding: clamp(2.5rem, 1.6667rem + 4.1667vw, 5rem) 0;
 
-    h2 {
-      text-align: center;
-    }
-
     .blog__posts {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.25rem;
-      max-width: 400px;
 
       @media (width > 48rem) {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

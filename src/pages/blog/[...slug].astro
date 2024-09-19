@@ -141,6 +141,13 @@ const { Content } = await post.render();
       display: grid;
       gap: 1.25rem;
 
+      blockquote {
+        position: relative;
+        border: none;
+        border-left: 2px solid var(--accent);
+        padding: 0 0 0 1.75rem;
+      }
+
       a {
         color: var(--accent);
         font-weight: 700;
