@@ -7,15 +7,15 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://webro.fr",
+  site: "https://malinsdeaudouce.fr",
   integrations: [
     icon(),
     lottie(),
     sitemap({
       filter: (page) =>
-        page !== "https://webro.fr/404/" &&
-        page !== "https://webro.fr/merci-newsletter/" &&
-        page !== "https://webro.fr/merci-contact/",
+        page !== "https://malinsdeaudouce.fr/404/" &&
+        page !== "https://malinsdeaudouce.fr/merci-newsletter/" &&
+        page !== "https://malinsdeaudouce.fr/merci-contact/",
     }),
     partytown(),
   ],

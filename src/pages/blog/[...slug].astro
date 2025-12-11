@@ -19,7 +19,10 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={`${post.data.title} | Webro`} image={post.data.image.og}>
+<Layout
+  title={`${post.data.title} | Malins d'eau douce`}
+  image={post.data.image.og}
+>
   <section class="container bg-gray">
     <div class="fullwidth">
       <h1>{post.data.title}</h1>

@@ -9,8 +9,8 @@ title: "Quel est la durée de vie moyenne d'un site web ? 10 facteurs de sa long
 author:
   name: "Yanis Boulayoune"
   image: "../../assets/yanis-rounded.png"
-  description: "Co-fondateur dans l'agence Webro. Chef de projet et commercial, Yanis collabore avec les clients et identifie les objectifs des sites web. Vous pouvez le suivre sur"
-  linkedIn: "https://www.linkedin.com/in/yanis-boulayoune-webro/"
+  description: "Co-fondateur de l'agence Malins d'eau douce. Chef de projet et commercial, Yanis collabore avec les clients et identifie les objectifs des sites web. Vous pouvez le suivre sur"
+  linkedIn: "https://www.linkedin.com/in/yanis-boulayoune/"
 ---
 
 Un jour, un client me demande : "Combien de fois on doit refaire notre site web ?"
@@ -133,7 +133,7 @@ Un excellent site web soutient votre entreprise de plusieurs manières :
 
 Concevoir un nouveau site qui aborde tous ces facteurs peut prendre beaucoup de temps et d'efforts. C'est quelque chose que vous voulez faire correctement. La bonne nouvelle est qu'un site web bien conçu sera efficace pendant une période plus longue et que le retour sur investissement de votre site web suivra le même chemin.
 
-![Tableau comparatif montrant la durée de vie moyenne d'un site web de 2 ans et 1 mois par rapport à la durée de vie moyenne d'un site Web Webro de 6 ans et 4 mois, représentée par des courbes qui se chevauchent.](../../assets/blog/post-1/image-4.svg)
+![Tableau comparatif montrant la durée de vie moyenne d'un site web de 2 ans et 1 mois par rapport à la durée de vie moyenne d'un site Web de 6 ans et 4 mois, représentée par des courbes qui se chevauchent.](../../assets/blog/post-1/image-4.svg)
 
 ## L'essentiel à savoir
 

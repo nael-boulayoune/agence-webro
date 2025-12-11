@@ -6,19 +6,19 @@ import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <Layout
-  title="Blog | Webro"
+  title="Blog | Malins d'eau douce"
   description="Obtenez des conseils pratiques sur l'IA, le SEO et la conception web. Recevez des astuces sur le marketing par email toutes les 2 semaines."
 >
   <section class="container bg-gray">
     <div class="grid">
       <div>
         <div>
-          <p class="description">Le blog de Webro</p>
+          <p class="description">Le blog des Malins d'eau douce</p>
           <h1>
             Obtenez des conseils pratiques sur l'IA, le SEO et la conception web
           </h1>
@@ -45,7 +45,7 @@ const posts = (await getCollection("blog")).sort(
       <h2>Il y a encore plus d'infos là-bas...</h2>
       <p class="intro">
         Les meilleurs conseils sont disponibles en un seul et même endroit :
-        notre agence Webro.
+        notre agence web.
       </p>
       <CTA title="Recevoir des conseils par Yanis" />
     </div>

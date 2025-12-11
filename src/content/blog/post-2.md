@@ -49,13 +49,13 @@ C'est aussi l'occasion d'utiliser un mot-clé et d'indiquer la pertinence. Mais 
 
 Plutôt que d’écrire un titre fantaisie, mais vague, écrivez quelque chose de descriptif. Assurez-vous d’expliquer ce que fait l’entreprise en haut de la page, au-dessus du pli.
 
-![Flêche pointant vers le titre de la page d'accueil du site Webro : "Message clair".](../../assets/blog/post-2/image-1.png)
+![Flêche pointant vers le titre de la page d'accueil du site Malins d'eau douce : "Message clair".](../../assets/blog/post-2/image-1.png)
 
 ### Attends, c'est quoi le pli ?
 
 Sur chaque écran, il y a une zone de visualisation. Au bas se trouve le fameux pli. Pour voir quelque chose en dessous de cette ligne, le visiteur doit faire défiler. Prenons la même image qu'avant et définissons le pli pour un iPhone 14 Pro Max, par exemple.
 
-![Le "pli moyen" de la page d'accueil de Webro pour un iPhone 14 Pro Max.](../../assets/blog/post-2/image-2.png)
+![Le "pli moyen" de la page d'accueil de Malins d'eau douce pour un iPhone 14 Pro Max.](../../assets/blog/post-2/image-2.png)
 
 Il y a un "pli moyen" pour chaque écran et c'est important de savoir ce que vous allez mettre au-dessus et en-dessous de lui. [Une étude](https://www.nngroup.com/articles/scrolling-and-attention/) montre que les visiteurs passent 80% de leur temps au-dessus du pli.
 
